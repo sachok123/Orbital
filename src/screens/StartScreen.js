@@ -9,9 +9,9 @@ export default function StartScreen({ navigation }) {
   return (
     <Background>
       <Logo />
-      <Header>Login </Header>
+      <Header>Welcome</Header>
       <Paragraph>
-        Welcome
+        The easiest way to start your education.
       </Paragraph>
       <Button
         mode="contained"

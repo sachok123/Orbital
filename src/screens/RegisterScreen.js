@@ -11,13 +11,17 @@ import { theme } from '../core/theme'
 import { emailValidator } from '../helpers/emailValidator'
 import { passwordValidator } from '../helpers/passwordValidator'
 import { nameValidator } from '../helpers/nameValidator'
+import firebase from '../../database/firebase.js';
+
 
 export default function RegisterScreen({ navigation }) {
   const [name, setName] = useState({ value: '', error: '' })
   const [email, setEmail] = useState({ value: '', error: '' })
   const [password, setPassword] = useState({ value: '', error: '' })
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const [isRegisterLoading, setIsRegisterLoading] = useState(false);
 
-  const onSignUpPressed = () => {
+  const onSignUpPressed = async() => {
     const nameError = nameValidator(name.value)
     const emailError = emailValidator(email.value)
     const passwordError = passwordValidator(password.value)
@@ -26,6 +30,13 @@ export default function RegisterScreen({ navigation }) {
       setEmail({ ...email, error: emailError })
       setPassword({ ...password, error: passwordError })
       return
+    }
+    try {
+      const user = await firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
+        console.log("user", user)
+    }catch (error) {
+      console.log("error", error);
+      alert(error.message);
     }
     navigation.reset({
       index: 0,
