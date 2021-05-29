@@ -13,9 +13,10 @@ import { passwordValidator } from '../helpers/passwordValidator'
 import firebase from '../../database/firebase.js';
 
 export default function QuestionScreen({ navigation }) {
+    const user = firebase.auth().currentUser;
     const question = firebase.database().ref(`questions/${user.level}`)
 
-    const dbRef = firebase.database().ref();
+    /*const dbRef = firebase.database().ref();
     dbRef.child("questions").child(user.uid).get().then((snapshot) => {
       if (snapshot.exists()) {
         console.log(snapshot.val());
@@ -25,6 +26,12 @@ export default function QuestionScreen({ navigation }) {
     }).catch((error) => {
       console.error(error);
       alert(error);
-    });
+    }); */
 
+    return(
+      <Background>
+        <BackButton goBack={navigation.goBack} />
+        <Text>questions to be displayed here</Text>
+      </Background>
+    )
 }
