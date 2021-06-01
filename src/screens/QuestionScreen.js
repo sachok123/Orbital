@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect} from 'react'
 import { TouchableOpacity, StyleSheet, View } from 'react-native'
 import { Text } from 'react-native-paper'
 import Background from '../components/Background'
@@ -14,7 +14,18 @@ import firebase from '../../database/firebase.js';
 
 export default function QuestionScreen({ navigation }) {
     const user = firebase.auth().currentUser;
-    const question = firebase.database().ref(`questions/${user.level}`)
+    console.log(user.uid)
+    const users = firebase.database().ref(`users`)
+    users.get().then(function(snapshot){
+      console.log(snapshot.child(user.uid).child("level").val())
+    })
+    const questions = firebase.database().ref(`questions`)
+    console.log(questions)
+    questions.orderByChild("id").equalTo("1").get().then(function(snapshot)
+    {  console.log(snapshot.child(0).child("question").val())
+
+
+    })
 
     /*const dbRef = firebase.database().ref();
     dbRef.child("questions").child(user.uid).get().then((snapshot) => {
@@ -31,7 +42,7 @@ export default function QuestionScreen({ navigation }) {
     return(
       <Background>
         <BackButton goBack={navigation.goBack} />
-        <Text>questions to be displayed here</Text>
+        <Text>question</Text>
       </Background>
     )
 }
