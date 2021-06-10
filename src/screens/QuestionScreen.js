@@ -115,12 +115,17 @@ export default function QuestionScreen({ navigation }) {
         updateLevel()
       }
       setUserAnswer("")
+      clearText()
     }
 
-    const clearText = (val) =>{
+    const clearText = () =>{
       setTextInput('');
   }
 
+    const bothFunction = (text) => {
+      setUserAnswer(text)
+      setTextInput(text)
+    }
 
     populateQuestions()
     populateAnswers()
@@ -136,8 +141,9 @@ export default function QuestionScreen({ navigation }) {
         <Header>Questions</Header>
         <Text>{question}</Text>
         <TextInput
+        value = {textInput}
         label = "Answer"
-        onChangeText = {(text) => setUserAnswer(text)}
+        onChangeText = {(text) => bothFunction(text)}
         
         />
         <Button mode = "contained" onPress ={onSubmitPressed}>
