@@ -34,7 +34,7 @@ export default function LoginScreen({ navigation }) {
       })
     }catch (error) {
       console.log("error", error);
-      alert("You are not registered. Please sign up!");
+      alert(error);
    
     }
 
