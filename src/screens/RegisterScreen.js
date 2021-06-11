@@ -32,11 +32,12 @@ export default function RegisterScreen({ navigation }) {
       return
     }
     try {
-      const user = await firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
+      let user = null
+      await firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
+                          .then(userCredential => {user = userCredential.user})
         console.log("user", user)
-        const level = firebase.database().ref(`users/${user.uid}`).push();
-        level.set({
-          level: "0"
+        const level = firebase.database().ref(`users/${user.uid}`).set({
+          level: 0
         })
 
     }catch (error) {
