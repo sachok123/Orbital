@@ -12,15 +12,26 @@ import { emailValidator } from '../helpers/emailValidator'
 import { passwordValidator } from '../helpers/passwordValidator'
 import firebase from '../../database/firebase.js';
 
-export default function TreeScreen({navigation}){
-    return (
-        <Background>
-            <BackButton goBack={navigation.goBack} />
-            <Image source={require('../assets/sapling.png')} style={styles.image} />
-            
-        </Background>
-    )
 
+
+
+export default function TreeScreen({navigation}){
+
+    const [imageUrl, setImageUrl] = useState(undefined);
+
+    React.useEffect(() => {
+      firebase.storage()
+      .ref('/' + 'germination.jpg') 
+      .getDownloadURL()
+      .then((url) => {
+        setImageUrl(url);
+      })
+      .catch((e) => console.log('Errors while downloading => ', e));
+  }, []);
+
+return (
+    <Image style={styles.image} source={{uri: imageUrl}} />
+);
 }
 
 const styles = StyleSheet.create({

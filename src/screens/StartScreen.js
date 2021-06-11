@@ -4,6 +4,8 @@ import Logo from '../components/Logo'
 import Header from '../components/Header'
 import Button from '../components/Button'
 import Paragraph from '../components/Paragraph'
+import firebase from '../../database/firebase.js';
+
 
 export default function StartScreen({ navigation }) {
   return (
@@ -28,3 +30,4 @@ export default function StartScreen({ navigation }) {
     </Background>
   )
 }
+
