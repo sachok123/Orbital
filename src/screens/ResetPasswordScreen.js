@@ -6,6 +6,7 @@ import Header from '../components/Header'
 import TextInput from '../components/TextInput'
 import Button from '../components/Button'
 import { emailValidator } from '../helpers/emailValidator'
+import firebase from '../../database/firebase.js'
 
 export default function ResetPasswordScreen({ navigation }) {
   const [email, setEmail] = useState({ value: '', error: '' })
@@ -14,8 +15,9 @@ export default function ResetPasswordScreen({ navigation }) {
     const emailError = emailValidator(email.value)
     if (emailError) {
       setEmail({ ...email, error: emailError })
-      return
+      return 
     }
+    //firebase.auth().sendResetPasswordEmail(email.value)
     navigation.navigate('LoginScreen')
   }
 

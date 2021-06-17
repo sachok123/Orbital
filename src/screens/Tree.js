@@ -11,7 +11,7 @@ import { theme } from '../core/theme'
 import { emailValidator } from '../helpers/emailValidator'
 import { passwordValidator } from '../helpers/passwordValidator'
 import firebase from '../../database/firebase.js';
-
+import '@firebase/storage'
 
 
 
@@ -30,8 +30,11 @@ export default function TreeScreen({navigation}){
   }, []);
 
 return (
+    <Background>
+    <BackButton goBack={navigation.goBack} />
     <Image style={styles.image} source={{uri: imageUrl}} />
-);
+    </Background>
+)
 }
 
 const styles = StyleSheet.create({

@@ -11,7 +11,6 @@ import firebase from '../../database/firebase.js';
 export default function Dashboard({ navigation }) {
   return (
     <Background>
-      <BackButton goBack={navigation.goBack} />
       <Logo />
       <Header>Let’s start</Header>
       <Button
@@ -24,6 +23,12 @@ export default function Dashboard({ navigation }) {
         mode = "outlined"
         onPress = {() => navigation.navigate("TreeScreen")}>
         See your Tree!
+      </Button>
+
+      <Button
+        mode="outlined"
+        onPress={() => navigation.navigate("ReviewScreen")}>
+        Questions Review
       </Button>
 
       <Button

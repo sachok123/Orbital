@@ -48,7 +48,7 @@ export default function QuestionScreen({ navigation }) {
 
     }, [email])
 
-    React.useEffect(() => {
+    React.useEffect(() => {// rendering of question according to user level 
 
       firebase.database().ref(`questions/${levels}`)
       .on('value', (qn) => {
@@ -64,7 +64,7 @@ export default function QuestionScreen({ navigation }) {
 
     }, [levels])
 
-    const answerValidator = (text) => {
+    const answerValidator = (text) => { //validation of answer 
       if (text == answer){
         alert("That's correct, well done!")
         return true
@@ -79,14 +79,14 @@ export default function QuestionScreen({ navigation }) {
       const correct = answerValidator(userAnswer)
       if (correct == true) {
         setLevels(levels + 1)
-        firebase.database().ref("users").child(users).child("level").set(levels + 1)
+        firebase.database().ref("users").child(users).child("level").set(levels + 1) //update of user level 
       }
       setUserAnswer("")
       clearText()
     }
 
 
-    const clearText = () =>{
+    const clearText = () =>{ // allows text to be cleared for the next question 
       setTextInput('');
   }
 
@@ -96,14 +96,26 @@ export default function QuestionScreen({ navigation }) {
     }
 
 
+
+    const styles = StyleSheet.create({
+      baseText: {
+        fontFamily: "Cochin",
+        fontSize: 19
+      },
+      questionText: {
+        fontFamily: "Cochin",
+        fontSize: 25
+      }
+    });
+    
     return(
       <Background>
         <BackButton goBack={navigation.goBack} />
         <Header>Questions</Header>
-        <Text>Level: {levels} </Text>
-        <Text>Question No: {questionState.id}</Text>
-        <Text>Question: {questionState.question}</Text>
-        <Text>Answer: {questionState.answer}</Text>
+        <Text style = {styles.baseText}> Level: {levels} </Text>
+        <Text style = {styles.baseText}> Question No: {questionState.id}</Text>
+        <Text style = {styles.baseText}> Question: {questionState.question}</Text>
+        <Text style = {styles.baseText}> Answer: {questionState.answer}</Text>
 
         <TextInput
         value = {textInput}
@@ -116,6 +128,5 @@ export default function QuestionScreen({ navigation }) {
         </Button>
       </Background>
     )
-
 
 }
