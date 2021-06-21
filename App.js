@@ -13,6 +13,7 @@ import {
 } from './src/screens'
 import QuestionScreen from './src/screens/QuestionScreen'
 import TreeScreen from './src/screens/Tree'
+import ReviewScreen from './src/screens/ReviewScreen'
 
 StatusBar.setBarStyle('light-content')
 const Stack = createStackNavigator()
@@ -33,6 +34,7 @@ export default function App() {
           <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
           <Stack.Screen name="Dashboard" component={Dashboard} />
           <Stack.Screen name = "TreeScreen" component = {TreeScreen}/>
+          <Stack.Screen name = "ReviewScreen" component = {ReviewScreen}/>
           <Stack.Screen
             name="ResetPasswordScreen"
             component={ResetPasswordScreen}

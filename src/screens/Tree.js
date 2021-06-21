@@ -11,17 +11,27 @@ import { theme } from '../core/theme'
 import { emailValidator } from '../helpers/emailValidator'
 import { passwordValidator } from '../helpers/passwordValidator'
 import firebase from '../../database/firebase.js';
-import '@firebase/storage'
-
+import '@firebase/storage';
 
 
 export default function TreeScreen({navigation}){
 
     const [imageUrl, setImageUrl] = useState(undefined);
 
+    var userId = firebase.auth().currentUser.uid; 
+    var photoName = 'level0.png'
+
+      firebase.database().ref(`users/${userId}`)
+      .on('value', (user) => {
+        var level = user.val().level
+        photoName = 'level' + level + '.png'; 
+        console.log(level)
+      })
+
+
     React.useEffect(() => {
       firebase.storage()
-      .ref('/' + 'germination.jpg') 
+      .ref('/' + photoName) 
       .getDownloadURL()
       .then((url) => {
         setImageUrl(url);
@@ -30,12 +40,13 @@ export default function TreeScreen({navigation}){
   }, []);
 
 return (
-    <Background>
-    <BackButton goBack={navigation.goBack} />
+  <Background>
+  <BackButton goBack={navigation.goBack} />
     <Image style={styles.image} source={{uri: imageUrl}} />
     </Background>
-)
+);
 }
+
 
 const styles = StyleSheet.create({
     image: {
