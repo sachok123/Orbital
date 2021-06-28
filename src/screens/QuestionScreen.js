@@ -99,11 +99,11 @@ export default function QuestionScreen({ navigation }) {
 
     const styles = StyleSheet.create({
       baseText: {
-        fontFamily: "Cochin",
+        //fontFamily: "Cochin",
         fontSize: 19
       },
       questionText: {
-        fontFamily: "Cochin",
+        //fontFamily: "Cochin",
         fontSize: 25
       }
     });
@@ -115,7 +115,6 @@ export default function QuestionScreen({ navigation }) {
         <Text style = {styles.baseText}> Level: {levels} </Text>
         <Text style = {styles.baseText}> Question No: {questionState.id}</Text>
         <Text style = {styles.baseText}> Question: {questionState.question}</Text>
-        <Text style = {styles.baseText}> Answer: {questionState.answer}</Text>
 
         <TextInput
         value = {textInput}

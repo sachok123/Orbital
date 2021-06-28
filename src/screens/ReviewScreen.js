@@ -58,7 +58,7 @@ export default function ReviewScreen({navigation}){
       }, [levelCounter])
 
       const onNextPressed = () => {
-          if (levelCounter < level){
+          if (levelCounter < level - 1){
               setLevelCounter(levelCounter + 1)
           }
           else {
