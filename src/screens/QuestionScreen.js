@@ -1,124 +1,100 @@
-import React, { useState, useEffect} from 'react'
-import { TouchableOpacity, StyleSheet, View, RecyclerViewBackedScrollView } from 'react-native'
+import React, { useState } from 'react'
+import { TouchableOpacity, StyleSheet, View } from 'react-native'
 import { Text } from 'react-native-paper'
 import Background from '../components/Background'
-import Logo from '../components/Logo'
 import Header from '../components/Header'
 import Button from '../components/Button'
 import TextInput from '../components/TextInput'
 import BackButton from '../components/BackButton'
-import { theme } from '../core/theme'
-import { emailValidator } from '../helpers/emailValidator'
-import { passwordValidator } from '../helpers/passwordValidator'
 import firebase from '../../database/firebase.js';
 
 
+
 export default function QuestionScreen({ navigation }) {
-    const [question, setQuestion] = useState("")
-    const [answer, setAnswer] = useState("")
-    const [userAnswer, setUserAnswer] = useState("")
-    const [textInput, setTextInput] = useState("")
-    const user = firebase.auth().currentUser;  
-   // console.log(user.uid)
-    const questionsArray = []
-    const answersArray = []
 
+    const[email, setEmail] = React.useState('')
+    const [levels, setLevels] = React.useState(0)
+    const [counter, setCounter] = React.useState(0)
+    const [users, userState] = React.useState('')
+    const [questionState, setQuestions] = React.useState({
+      answer: '', 
+      id: '', 
+      question:''
+    })
 
+    const [textInput, setTextInput] = React.useState('')
+    const [userAnswer, setUserAnswer] = React.useState('')
+    const [answer, setAnswer] = React.useState('')
 
-  /*  const getQuestion = () => {
-      const users =  firebase.database().ref("users")
-      users.on("value", (snapshot) => {
-        const level = snapshot.child(user.uid).child("level").val()
-        setQuestion(questionsArray[level - 1])
+    React.useEffect(() => {
+
+      var userEmail = firebase.auth().currentUser.email;
+      setEmail(userEmail) 
+      console.log('User email is', userEmail); 
+
+      var userId = firebase.auth().currentUser.uid; 
+      userState(userId)
+      console.log(userId)
+
+      let mounted = true;
+      firebase.database().ref(`users/${userId}`)
+      .on('value', (user) => {
+        if (mounted){
+        var level = user.val().oplevel
+        var totallevel = user.val().totallevel
+        if (level == 20) {
+          alert("Congrats! You've completed this set of questions!")
+          navigation.navigate('Dashboard')
+        } else {
+        setLevels(level)
+        setCounter(totallevel)
+        console.log(level)
+        }
+        }
       })
-    }
+      return () => mounted = false; 
+    }, [])
 
-    const getAnswer = () => {
-      const users = firebase.database().ref("users")
-      users.on("value", (snapshot) => {
-        const level = snapshot.child(user.uid).child("level").val()
-        setAnswer(answersArray[level - 1])
-      })
-    } */
-
-
-    const getQuestion = async() => {
-      return await firebase.database().ref("users").get()
-      .then(function(snapshot){
-        const level = snapshot.child(user.uid).child("level").val()
-        return questionsArray[level - 1]
-      }).then(value => {
-         setQuestion(value)
+    React.useEffect(() => {// rendering of question according to user level 
+      let mounted = true;
+      firebase.database().ref(`operations/${levels}`)
+      .on('value', (qn) => {
+        if (mounted){
+        var ans = qn.val().answer
+        setAnswer(ans)
+        setQuestions({
+          answer: qn.val().answer,
+          id: qn.val().id, 
+          question: qn.val().question
         })
-     
-    }
-
-    const getAnswer = async() => {
-      return await firebase.database().ref("users").get()
-      .then(function(snapshot){
-        const level = snapshot.child(user.uid).child("level").val()
-        return answersArray[level - 1]
-      }).then(value => {
-        setAnswer(value)
-      })
-     
-    } 
-
-
-    const populateQuestions = async() => {
-      const questions = await firebase.database().ref(`questions`).once("value").then(function(snapshot){
-        snapshot.forEach(child => {
-        questionsArray.push(child.child("question").val())
-        }
-      )
-      //return questionsArray[getUserLevel()]
       }
-      )
-  
-    }
-
-    const populateAnswers = async() => {
-      const questions = await firebase.database().ref(`questions`).once("value").then(function(snapshot){
-        snapshot.forEach(child => {
-        answersArray.push(child.child("answer").val())
-        }
-      )
-      //return answersArray[getUserLevel()]
-      }
-      )
-    }
-
-    const updateLevel = async() => {
-      return await firebase.database().ref("users").get()
-      .then(function(snapshot){
-        const level = snapshot.child(user.uid).child("level").val()
-        const newLevel = level + 1
-        firebase.database().ref("users").child(user.uid).child("level").set(newLevel)
       })
-      
-    }
+      return () => mounted = false;
+    }, [levels])
 
-    const answerValidator = (text) => {
+    const answerValidator = (text) => { //validation of answer 
       if (text == answer){
-        alert("correct!")
+        alert("That's correct, well done!")
         return true
       }
       else{
-        alert("Wrong answer!")
+        alert("Oops that's wrong...try again!")
         return false
       }
     }
-
+    
     const onSubmitPressed = () => {
       const correct = answerValidator(userAnswer)
-      if (correct == true) {
-        updateLevel()
+      if (correct == true && levels < 20) {
+        setLevels(levels + 1)
+        firebase.database().ref("users").child(users).child("oplevel").set(levels + 1) //update of user 4 ops level 
+        firebase.database().ref("users").child(users).child("totallevel").set(counter + 1) //update of user total level 
       }
       setUserAnswer("")
       clearText()
     }
-
-    const clearText = () =>{
+ 
+    const clearText = () =>{ // allows text to be cleared for the next question 
       setTextInput('');
   }
 
@@ -127,19 +103,27 @@ export default function QuestionScreen({ navigation }) {
       setTextInput(text)
     }
 
-    populateQuestions()
-    populateAnswers()
-    getQuestion()
-    getAnswer()
+
+
+    const styles = StyleSheet.create({
+      baseText: {
+        //fontFamily: "Cochin",
+        fontSize: 19
+      },
+      questionText: {
+        //fontFamily: "Cochin",
+        fontSize: 25
+      }
+    });
     
-    
-  
-   
     return(
       <Background>
         <BackButton goBack={navigation.goBack} />
         <Header>Questions</Header>
-        <Text>{question}</Text>
+
+        <Text style = {styles.baseText}> Question No: {questionState.id}</Text>
+        <Text style = {styles.baseText}> {questionState.question}</Text>
+
         <TextInput
         value = {textInput}
         label = "Answer"
@@ -149,8 +133,7 @@ export default function QuestionScreen({ navigation }) {
         <Button mode = "contained" onPress ={onSubmitPressed}>
           Submit
         </Button>
-
-        
       </Background>
     )
+
 }
