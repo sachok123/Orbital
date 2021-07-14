@@ -14,6 +14,10 @@ import {
 import QuestionScreen from './src/screens/QuestionScreen'
 import TreeScreen from './src/screens/Tree'
 import ReviewScreen from './src/screens/ReviewScreen'
+import TopicScreen from './src/screens/TopicScreen'
+import FractScreen from './src/screens/FractScreen'
+import FractReviewScreen from './src/screens/FractReviewScreen'
+import TopicReviewScreen from './src/screens/TopicReviewScreen'
 
 StatusBar.setBarStyle('light-content')
 const Stack = createStackNavigator()
@@ -35,6 +39,10 @@ export default function App() {
           <Stack.Screen name="Dashboard" component={Dashboard} />
           <Stack.Screen name = "TreeScreen" component = {TreeScreen}/>
           <Stack.Screen name = "ReviewScreen" component = {ReviewScreen}/>
+          <Stack.Screen name = "TopicScreen" component = {TopicScreen}/>
+          <Stack.Screen name = "FractScreen" component = {FractScreen}/>
+          <Stack.Screen name = "TopicReviewScreen" component = {TopicReviewScreen}/>
+          <Stack.Screen name = "FractReviewScreen" component = {FractReviewScreen}/>
           <Stack.Screen
             name="ResetPasswordScreen"
             component={ResetPasswordScreen}

@@ -2,16 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { TouchableOpacity, StyleSheet, View, Alert } from 'react-native'
 import { Text } from 'react-native-paper'
 import Background from '../components/Background'
-import Logo from '../components/Logo'
 import Header from '../components/Header'
 import Button from '../components/Button'
-import TextInput from '../components/TextInput'
 import BackButton from '../components/BackButton'
-import { theme } from '../core/theme'
-import { emailValidator } from '../helpers/emailValidator'
-import { passwordValidator } from '../helpers/passwordValidator'
 import firebase from '../../database/firebase.js';
-import { event } from 'react-native-reanimated'
 
 export default function ReviewScreen({navigation}){
     const[levelCounter , setLevelCounter] = useState(0)
@@ -20,52 +14,54 @@ export default function ReviewScreen({navigation}){
     const [questionState, setQuestions] = useState({
         answer: '', 
         id: '', 
-        question:''
+        question:'', 
+        method: ''
       })
     const user = firebase.auth().currentUser
-    console.log(user.uid)
     console.log(level)
 
-
     useEffect(() => {
-  
+        let mounted = true; 
         firebase.database().ref(`users/${user.uid}`)
         .on('value', (user) => {
-          var level = user.val().level
+          if (mounted){
+          var level = user.val().oplevel
           setLevel(level)
           console.log(level)
+          }
         })
-  
+        return () => mounted = false;
       }, [user.uid])
 
-
-
-
     useEffect(() => {// rendering of question according to user level 
-
-        firebase.database().ref(`questions/${levelCounter}`)
+        let mounted = true;
+        firebase.database().ref(`operations/${levelCounter}`)
         .on('value', (qn) => {
+          if (mounted){
           console.log(qn.val())
           var ans = qn.val().answer
           setAnswer(ans)
           setQuestions({
             answer: qn.val().answer,
             id: qn.val().id, 
-            question: qn.val().question
+            question: qn.val().question, 
+            method: qn.val().method
           })
+        }
         })
-  
+        return () => mounted = false;
       }, [levelCounter])
 
       const onNextPressed = () => {
-          if (levelCounter < level - 1){
-              setLevelCounter(levelCounter + 1)
-          }
-          else {
-              alert("Complete the next question first!")
-          }
-
+        if (levelCounter < level - 1){
+          setLevelCounter(levelCounter + 1)
       }
+      else if (levelCounter == 19){
+          alert("You've reached the end!")
+      } else {
+        alert("Complete the next question first!")
+      }
+  }
 
       const onPreviousPressed = () =>{
           if(levelCounter == 0 ){
@@ -91,11 +87,11 @@ export default function ReviewScreen({navigation}){
         <Background>
           <BackButton goBack={navigation.goBack} />
           <Header>Questions</Header>
-          <Text style = {styles.baseText}>Level: {levelCounter} </Text>
-          <Text style = {styles.baseText}>Question No: {questionState.id}</Text>
-          <Text style = {styles.baseText}>Question: {questionState.question}</Text>
+          <Text style = {styles.baseText}>Question {questionState.id} </Text>
+          <Text style = {styles.baseText}>{questionState.question}</Text>
           <Text style = {styles.baseText}>Answer: {questionState.answer}</Text>
-  
+          <Text style = {styles.baseText}>{questionState.method}</Text>
+
           <Button mode = "contained" onPress ={onNextPressed}>
             Next
           </Button>
@@ -105,8 +101,5 @@ export default function ReviewScreen({navigation}){
 
         </Background>
       )
-  
-
-
 
 }

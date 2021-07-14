@@ -2,14 +2,10 @@ import React, { useState } from 'react'
 import { TouchableOpacity, StyleSheet, View } from 'react-native'
 import { Text } from 'react-native-paper'
 import Background from '../components/Background'
-import Logo from '../components/Logo'
 import Header from '../components/Header'
 import Button from '../components/Button'
 import TextInput from '../components/TextInput'
 import BackButton from '../components/BackButton'
-import { theme } from '../core/theme'
-import { emailValidator } from '../helpers/emailValidator'
-import { passwordValidator } from '../helpers/passwordValidator'
 import firebase from '../../database/firebase.js';
 
 
@@ -18,6 +14,7 @@ export default function QuestionScreen({ navigation }) {
 
     const[email, setEmail] = React.useState('')
     const [levels, setLevels] = React.useState(0)
+    const [counter, setCounter] = React.useState(0)
     const [users, userState] = React.useState('')
     const [questionState, setQuestions] = React.useState({
       answer: '', 
@@ -39,20 +36,30 @@ export default function QuestionScreen({ navigation }) {
       userState(userId)
       console.log(userId)
 
+      let mounted = true;
       firebase.database().ref(`users/${userId}`)
       .on('value', (user) => {
-        var level = user.val().level
+        if (mounted){
+        var level = user.val().oplevel
+        var totallevel = user.val().totallevel
+        if (level == 20) {
+          alert("Congrats! You've completed this set of questions!")
+          navigation.navigate('Dashboard')
+        } else {
         setLevels(level)
+        setCounter(totallevel)
         console.log(level)
+        }
+        }
       })
-
-    }, [email])
+      return () => mounted = false; 
+    }, [])
 
     React.useEffect(() => {// rendering of question according to user level 
-
-      firebase.database().ref(`questions/${levels}`)
+      let mounted = true;
+      firebase.database().ref(`operations/${levels}`)
       .on('value', (qn) => {
-        console.log(qn.val())
+        if (mounted){
         var ans = qn.val().answer
         setAnswer(ans)
         setQuestions({
@@ -60,8 +67,9 @@ export default function QuestionScreen({ navigation }) {
           id: qn.val().id, 
           question: qn.val().question
         })
+      }
       })
-
+      return () => mounted = false;
     }, [levels])
 
     const answerValidator = (text) => { //validation of answer 
@@ -74,18 +82,18 @@ export default function QuestionScreen({ navigation }) {
         return false
       }
     }
-
+    
     const onSubmitPressed = () => {
       const correct = answerValidator(userAnswer)
-      if (correct == true) {
+      if (correct == true && levels < 20) {
         setLevels(levels + 1)
-        firebase.database().ref("users").child(users).child("level").set(levels + 1) //update of user level 
+        firebase.database().ref("users").child(users).child("oplevel").set(levels + 1) //update of user 4 ops level 
+        firebase.database().ref("users").child(users).child("totallevel").set(counter + 1) //update of user total level 
       }
       setUserAnswer("")
       clearText()
     }
-
-
+ 
     const clearText = () =>{ // allows text to be cleared for the next question 
       setTextInput('');
   }
@@ -112,9 +120,9 @@ export default function QuestionScreen({ navigation }) {
       <Background>
         <BackButton goBack={navigation.goBack} />
         <Header>Questions</Header>
-        <Text style = {styles.baseText}> Level: {levels} </Text>
+
         <Text style = {styles.baseText}> Question No: {questionState.id}</Text>
-        <Text style = {styles.baseText}> Question: {questionState.question}</Text>
+        <Text style = {styles.baseText}> {questionState.question}</Text>
 
         <TextInput
         value = {textInput}

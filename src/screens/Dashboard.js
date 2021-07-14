@@ -2,9 +2,8 @@ import React from 'react'
 import Background from '../components/Background'
 import Logo from '../components/Logo'
 import Header from '../components/Header'
-import Paragraph from '../components/Paragraph'
 import Button from '../components/Button'
-import BackButton from '../components/BackButton'
+
 import firebase from '../../database/firebase.js';
 
 
@@ -15,9 +14,9 @@ export default function Dashboard({ navigation }) {
       <Header>Let’s start</Header>
       <Button
         mode="outlined"
-        onPress={() => navigation.navigate("QuestionScreen")}
+        onPress={() => navigation.navigate("TopicScreen")}
       >
-        Questions
+        Topics
       </Button>
       <Button
         mode = "outlined"
@@ -27,7 +26,7 @@ export default function Dashboard({ navigation }) {
 
       <Button
         mode="outlined"
-        onPress={() => navigation.navigate("ReviewScreen")}>
+        onPress={() => navigation.navigate("TopicReviewScreen")}>
         Questions Review
       </Button>
 

@@ -37,7 +37,9 @@ export default function RegisterScreen({ navigation }) {
                           .then(userCredential => {user = userCredential.user})
         console.log("user", user)
         const level = firebase.database().ref(`users/${user.uid}`).set({
-          level: 0
+          fraclevel: 0,
+          level: 0,
+          totallevel: 0 
         })
 
     }catch (error) {
