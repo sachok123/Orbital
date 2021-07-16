@@ -21,20 +21,25 @@ export default function TreeScreen({navigation}){
         if (mounted){
         var level = user.val().totallevel
         setLevel(level)
+        //console.log(level)
         }
       })
-  return () => mounted = false;
-}, [])
+      return () => mounted = false;
+    }, [])
 
     React.useEffect(() => {
-      console.log(level)
+      let mounted = true; 
       firebase.storage()
       .ref('/' + 'level' + level + '.png') 
       .getDownloadURL()
       .then((url) => {
+        if (mounted){
         setImageUrl(url);
+        console.log(level)
+        }
       })
       .catch((e) => console.log('Errors while downloading => ', e));
+      return () => mounted = false;
   }, [level]);
 
     const jumpValue = new Animated.Value(0);

@@ -30,11 +30,10 @@ export default function FractionScreen({ navigation }) {
 
       var userEmail = firebase.auth().currentUser.email;
       setEmail(userEmail) 
-      console.log('User email is', userEmail); 
-
+     // console.log('User email is', userEmail); 
       var userId = firebase.auth().currentUser.uid; 
       userState(userId)
-      console.log(userId)
+      //console.log(userId)
 
       let mounted = true; 
       firebase.database().ref(`users/${userId}`)
@@ -60,8 +59,8 @@ export default function FractionScreen({ navigation }) {
       firebase.database().ref(`fractions/${levels}`)
       .on('value', (qn) => {
         if (mounted){
-            console.log(qn.val())
             var ans = qn.val().answer
+            console.log(ans)
             setAnswer(ans)
             setQuestions({
               answer: qn.val().answer,
