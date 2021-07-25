@@ -3,7 +3,7 @@
     "answer" : "3/5",
     "id" : "1",
     "method" : "6/10 = 3/5 in its simplest form!",
-    "question" : "Julia went to 10 houses on her street for Halloween. 6 of the houses gave her a chocolate bar. What fraction of houses on Julia’s street gave her a chocolate bar?"
+    "question" : "Julia went to 10 houses on her street for Halloween. 6 of the houses gave her a chocolate bar. What fraction of houses on Julia’s street gave her a chocolate bar? (no spaces nor units are required in the answers from here on)"
   }, {
     "answer" : "1/6",
     "id" : "2",
@@ -60,7 +60,7 @@
     "method" : "A trick question! if each cow gives 1/3 of the milk each day, there are 3 cows and the rest of the information is a diversion",
     "question" : "A herd of cows gives 4 litres of milk each day. But each cow gives one-third of total milk each day. They give 24 litres milk in six days. How many cows are there in the herd?"
   }, {
-    "answer" : "$64",
+    "answer" : "64",
     "id" : "13",
     "method" : "Draw a model for the remaining questions to help you visulaise better! Since 1 - 1/4 - 1/8 = 5/8, 5 units represent $40. hence 8 units would be 40 ÷ 5 x 8= 64",
     "question" : "Rachel spends 1/4 of her pocket money on chocolates, 1/8 on pizza. At the end she had $40 left. How much did she have at the beginning?"
@@ -95,7 +95,7 @@
     "method" : "If 2/9 are adults, 7/9 are children and there are 5 units more children. Hence, number of children was 95 ÷ 5 x 7 = 19 x 7 = 133",
     "question" : "2/9 of the people on a restaurant are adults. If there are 95 more children than adults, how many children are there in the restaurant?"
   }, {
-    "answer" : "$595",
+    "answer" : "595",
     "id" : "20",
     "method" : "Since before spending they had an even amount, and after Henry had spent 350 -95 = 255 more, Henry had 3 units less. Hence, the Gary had 255 ÷ 3 x 7 = $595",
     "question" : "Gary and Henry brought an equal amount of money for shopping. Gary spent $95 and Henry spent $350. After that Henry had 4/7 of what Gary had left. How much money did Gary have left after shopping?"
@@ -108,8 +108,8 @@
   "operations" : [ {
     "answer" : "2013",
     "id" : "1",
-    "method" : "4008 - 1995 = 2013",
-    "question" : "When you subtract 1,995 from 4,008, the answer is equal to"
+    "method" : "4008 - 1995 = 2013 ",
+    "question" : "When you subtract 1,995 from 4,008, the answer is equal to (no spaces nor units are required in the answers from here on)"
   }, {
     "answer" : "30898",
     "id" : "2",
@@ -146,7 +146,7 @@
     "method" : "(20 x 16) + (18 x 5) = 330",
     "question" : "Julia read a book in 20 days. She read 16 pages every day for the first 15 days, and 18 pages everyday for the last 5 days. How many pages did Julia read?"
   }, {
-    "answer" : "$480",
+    "answer" : "480",
     "id" : "9",
     "method" : "3 x 4 x 8 x 5 = 480",
     "question" : "Cayley earns $5 an hour by delivering newspapers. She delivers newspapers 3 days each week, for 4 hours at a time. After delivering newspapers for 8 weeks, how much money will Cayley earn?"
@@ -215,7 +215,7 @@
     "answer" : "23.206",
     "id" : "1",
     "method" : "Consider 2/10, mark the decimal point one place from right to left to become 0.2 Now consider 6/1000, mark the decimal point three places from right to left to become 0.006. Hence, 23 + 0.2 + 0.006 = 23.206  ",
-    "question" : "Write the following as a decimal; 23 + (2/10) + (6/1000)"
+    "question" : "Write the following as a decimal; 23 + (2/10) + (6/1000) (no spaces nor units are required in the answers from here on)"
   }, {
     "answer" : "869/50",
     "id" : "2",
@@ -317,11 +317,118 @@
     "method" : "",
     "question" : ""
   } ],
+  "rateandratio" : [ {
+    "answer" : "15",
+    "id" : "1",
+    "method" : "If in 3 minutes the printer can print 45 pages, this would mean it can print 45 ÷ 3 = 15 pages in one minute. Hence, the rate is 15 pages/min!",
+    "question" : "A printer can print 45 pages in 3 minutes. What is the rate of printing in pages per minute? (no spaces nor units are required in the answers from here on)"
+  }, {
+    "answer" : "11:14",
+    "id" : "2",
+    "method" : "Since there are 11 males in a club of 25 members, there are 25 - 11 = 14 females",
+    "question" : "A math club has 25 members, of which 11 are males and the rest are females. What is the ratio of males to females? "
+  }, {
+    "answer" : "7:10",
+    "id" : "3",
+    "method" : "There are 63 + 27 = 90 children in total. Hence the ratio of boys to all children is 63:90, which can be simplified to 7:10 as 9 is the highest common denominator of 63 and 90!",
+    "question" : "A group of preschoolers has 63 boys and 27 girls. What is the ratio of boys to all children?"
+  }, {
+    "answer" : "2/7",
+    "id" : "4",
+    "method" : "Be careful! Since Jayden gets 2 units and Caden gets 5 units, there are a total of 7 units. Hence, Jayden gets 2/7.",
+    "question" : "Jayden and Caden share a reward of $140 in a ratio of 2:5. What fraction of the total reward does Jayden get?"
+  }, {
+    "answer" : "49",
+    "id" : "5",
+    "method" : "If there were 2 units of girls and there a total of 7 units of children, each unit would be 14 ÷ 2 = 7 members and hence 7 units would be 7 x 7 = 49!",
+    "question" : "The ratio of girls to boys in a a swimming club was 2 : 5. There were 14 girls. How many total members were there in the club?"
+  }, {
+    "answer" : "99",
+    "id" : "6",
+    "method" : "Since there are 2 + 11 = 13 units represented by $117, each unit would be 117 ÷ 13 = $9. Hence, Isabella gets 9 x 11 = $99",
+    "question" : "Sophia and Isabella share a reward of $117 in a ratio of 2 : 11. How much money does Isabella get?"
+  }, {
+    "answer" : "135",
+    "id" : "7",
+    "method" : "Since 30 coins represents 2 units, 1 unit would be 30 ÷ 2 = 15. Therefore, there are 15 dimes and 15 x 8 = 120 nickels. Thus there are 120 + 15 = 135 dimes and nickels in total!",
+    "question" : "Gavin has nickels, dimes, and quarters in the ratio of 8 : 1 : 2. If 30 of Gavin's coins are quarters, how many nickels and dimes combined does Gavin have?"
+  }, {
+    "answer" : "96",
+    "id" : "8",
+    "method" : "since 4 + 9 = 13 units represent 156, 1 unit would be 156 ÷ 13 = 12 and the number of pens would be 4 x 12 = 48. Hence, the total cost would be 2 x 48 = $96",
+    "question" : "Mr Ong bought a total of 156 pens and pencils. The ratio of the number of pens the number of pencils he bought was 4:9. Each pen costs $2. How much did Mr Ong pay for the pens?"
+  }, {
+    "answer" : "56",
+    "id" : "9",
+    "method" : "Since the number of people at the cafe remained the same, we can convert 5:4 to 10:8 in order to compare with the ratio at the end of 3:8. This means 7 units of people left the pool, hence each unit would be 49 ÷ 7 = 7. Thus, there were 7 x 7 = 49 people at the cafe.",
+    "question" : "There is a cafe beside a pool. The ratio of the number of people swimming in the pool to the number of people at the cafe was 5:4. When 49 people left the pool, the ratio became 3:8. How many people were there at the cafe?"
+  }, {
+    "answer" : "23:12",
+    "id" : "10",
+    "method" : "The longer piece would thus by 72 - 26 = 46cm. The order is important, hence the ratio would be 46:26, which is also 23:12 in its simplest form",
+    "question" : "A piece of string 72cm long is cut into two pieces. One piece is 26 cm long. Find the ratio of the length of the longer piece to the length of the shorter piece. Express the ratio on its simplest form."
+  }, {
+    "answer" : "680",
+    "id" : "11",
+    "method" : "This would mean there the ratio of blue to red to white buttons is 6:4:7. 7 units of buttons are represented by 280 buttons, hence 1 unit would be 280 ÷ 7 = 40. Therefore, there would be a total of (6+4+7) x 40 = 17 x 40 = 680 buttons ",
+    "question" : "There are red, blue and white buttons in a box. The ratio of red buttons to white buttons is 4:7. The ratio of red buttons to blue buttons is 2:3. If there are 280 white buttons, how many buttons are there in total?"
+  }, {
+    "answer" : "96",
+    "id" : "12",
+    "method" : "1/3 of the pies left means 2/3 were sold, hence 9 x 2/3 = 6 units of pies were sold while 16 x 3/8 = 6 units of buns were sold too. hence 6 + 6 = 12 units represent 192, 1 unit would be 192÷12 = 16. Hence, 16 x 6 = 96 buns were sold!",
+    "question" : "Amy had some buns and pies in the ratio of 16:9. After she sold a total of 192 buns and pies, 1/3 of the pies were left and the number of buns decreased by 3/8. How many buns were sold?"
+  }, {
+    "answer" : "16",
+    "id" : "13",
+    "method" : "The main concept here is that the total number of stamps doesn't change! Hence, 3 units at the end represent 40 + 32 = 72, meaning 1 unit would represent 72 ÷ 3 = 24. Hence, Sally gave 40 - 24 = 16 stamps to Tina. ",
+    "question" : "Sally had 40 stamps and Tina had 32 stamps. After Sally gave some of her stamps to Tina, the number of stamps Sally and Tina had were in the ratio of 1:2. How many stamps did Tina get from Sally?"
+  }, {
+    "answer" : "15",
+    "id" : "14",
+    "method" : "The difference would be the same since they gave the same number of stickers away. Initially, the difference was 7 - 2 = 5 while later on it was 5 - 1 = 4. Hence, since the lowest common multiple is 4 x 5 = 20, the difference was 20 new units. Emily initally had 2 x 4 = 8 new units which represents 40 had 1 x 5 = 5 new units at the end. Thus, they each gave away (40 ÷ 8) x 3 = 15 stickers! ",
+    "question" : "Emily and Belinda had some stickers in the ratio 2:7 at first. After both of them gave away an equal number of stickers, the number of stickers Emily had left was 1/5 that of what Belinda had left. Given that Emily had 40 stickers at first, how many stickers did each of them give away? "
+  }, {
+    "answer" : "6",
+    "id" : "15",
+    "method" : "3 old units(OU) + 12 marbles(M) = 3 new units(NU) while 4 old units(OU) - 24 marbles(M) = 2 new units(NU), there for, 6 NU = 6 OU + 24M = 12 OU - 72 M. Hence, 6 old units is represented by 96 marbles and 1 old unit would be 96÷6 = 16 marbles. Hence, since marc had 3 old units at the start, he had 3 x 16 = 48 marbles at the start",
+    "question" : "The ratio of Marc's marbles to Paul's marbles at first was 3:4. After Marc bought another 12 marbles and Paul lost 24 marbles, the ratio became 3:2. How many marbles did Marc have at first?"
+  }, {
+    "answer" : "19.50",
+    "id" : "16",
+    "method" : "Apples are cheaper when bought in 10s at $3.50 because buying 2 groups of 5s would cost $4. Hence, we should purchase as many apples in 10s (5 x10) as possible and the remaining at 5s (5 x 1). Thus, 5 x $3.50 + 1 x $2 = $19.50",
+    "question" : "At a supermarket, apples were sold at 5 for $2 and 10 for $3.50. Mrs Teo bought 55 apples. What was the least amount she needed to pay for the apples in total?"
+  }, {
+    "answer" : "9",
+    "id" : "17",
+    "method" : "Printer A prints 25 - 20 = 5 photos more per minute than Printer B. Hence, it would take 45 ÷ 5 = 9 minutes to print 45 more photos than Printer A",
+    "question" : "Printer A can print 20 photos per minute while Printer B can print 25 photos per minute. Both printers started printing at the same time. How long did it take Printer B to print 45 photos more than Printer A?"
+  }, {
+    "answer" : "41.4",
+    "id" : "18",
+    "method" : "If 200km takes up 24 litres, 1km would consume 24 ÷ 200 = 0.120 litres of petrol. Hence, 345km would require 0.120 x 345 = 41.4 litres of petrol!",
+    "question" : "A car can travel a distance of 200 km on 24 lites of petrol. At this rate, how many litres of petrol will the car need to travel 345km?"
+  }, {
+    "answer" : "133",
+    "id" : "19",
+    "method" : "Initially Ray has & units while June has 3. Later on, Ray's 7 units - 48 = June's 3 units + 172. Hence, 4 units would be equal to 172 + 48 = 220. Hence 1 unit is represented by 220÷4 = $55. Thus in the end June had 3 x 55 + 172 = $165 + $172 = $337",
+    "question" : "Ray, June and Pei each had some money. The ratio of money Ray had to that June had was 7:3 at first. Ray lent $48 to Pei and June borrowed $172 from Pei. In the end, Ray had the same amount as June. How much money did June have in the end?"
+  }, {
+    "answer" : "120",
+    "id" : "20",
+    "method" : "Since $9.85 is more than 2 x 2.30 = 4.60, they both parked for more than an hour. Hence, Calvin would have paid 2.5 x 30 = 75 cents more than James. Hence, james paid (985 - 75) ÷ 2 = 455 cents which would mean he parked for (455 - 230) ÷ 2.5 = 90 minutes. Hence, Calvin parked for 90 + 40 = 120 minutes! ",
+    "question" : "Carpark Charges are as follows: 1st hour - $2.30 per hour, Subsequent per min - 2.5 cents. Calvin parked his car half an hour earlier than James but both left at the same time. If the combined total they both paid was $9.85, how long, in minutes, did Calvin park?"
+  }, {
+    "answer" : "",
+    "id" : "",
+    "method" : "",
+    "question" : ""
+  } ],
   "users" : {
     "Eu2zInUSqlZZRFHw8y6QkBTCze73" : {
       "fraclevel" : 0,
       "oplevel" : 7,
       "declevel" : 0,
+      "rlevel": 0,
       "totallevel" : 7
       
     },
@@ -329,12 +436,14 @@
       "fraclevel" : 0,
       "oplevel" : 5,
       "declevel" : 0,
+      "rlevel": 0,
       "totallevel" : 5
     },
     "MwnVXz3Ii1b70YF2xd4UznUzuXz1" : {
       "fraclevel" : 1,
       "oplevel" : 2,
       "declevel" : 0,
+      "rlevel": 0,
       "totallevel" : 3
     }
   }

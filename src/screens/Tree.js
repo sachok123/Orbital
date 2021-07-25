@@ -53,19 +53,18 @@ export default function TreeScreen({navigation}){
     };
 
   
-  
 return (
   <Background>
   <BackButton goBack={navigation.goBack} />
   <Header> Level {level}</Header>
   <View>
   <Animated.Image
-        style={{ transform: [{ scale: jumpValue }], width: 200, height: 200, marginBottom: 30, resizeMode:'contain' }}
+        style={{ transform: [{ scale: jumpValue }], width: 200, height: 200, marginBottom: 30, resizeMode:'stretch' }}
         source={{uri: imageUrl}} >
   </Animated.Image>
   <Button
         mode="outlined"
-        style={{ alignItems : 'center', justifyContent : 'center'}}
+        style={{ justifyContent : 'center', alignItems: 'center'}}
         onPress={ActiveAnim}>
           See Your Forest!
         </Button>

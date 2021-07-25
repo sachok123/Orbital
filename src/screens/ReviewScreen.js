@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { TouchableOpacity, StyleSheet, View, Alert } from 'react-native'
-import { Text } from 'react-native-paper'
+import { NativeBaseProvider, Text } from 'react-native-paper'
 import Background from '../components/Background'
 import Header from '../components/Header'
 import Button from '../components/Button'
 import BackButton from '../components/BackButton'
 import firebase from '../../database/firebase.js';
+
 
 export default function ReviewScreen({navigation}){
     const[levelCounter , setLevelCounter] = useState(0)
@@ -74,11 +75,11 @@ export default function ReviewScreen({navigation}){
 
       const styles = StyleSheet.create({
         baseText: {
-          fontFamily: "Cochin",
+          fontFamily: "sans-serif-light",
           fontSize: 19
         },
         questionText: {
-          fontFamily: "Cochin",
+          fontFamily: "sans-serif-light",
           fontSize: 19,
           fontWeight: "bold"
         }

@@ -33,6 +33,13 @@ export default function TopicReviewScreen({ navigation }) {
         >
           Decimals
         </Button>
+        <Button
+          mode="outlined"
+          onPress={() => navigation.navigate("RateRatioReviewScreen")}
+        >
+          Rate and Ratio
+        </Button>
+        
       </Background>
     )
   }

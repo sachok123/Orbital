@@ -74,12 +74,12 @@ export default function FractReviewScreen({navigation}){
 
       const styles = StyleSheet.create({
         baseText: {
-          fontFamily: "Cochin",
+          fontFamily: "sans-serif-light",
           fontSize: 19, 
           alignItems: 'center'
         },
         questionText: {
-          fontFamily: "Cochin",
+          fontFamily: "sans-serif-light",
           fontSize: 19,
           fontWeight: "bold"
         }, 

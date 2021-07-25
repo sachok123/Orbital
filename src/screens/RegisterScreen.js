@@ -40,6 +40,7 @@ export default function RegisterScreen({ navigation }) {
           declevel: 0, 
           fraclevel: 0,
           oplevel: 0,
+          rlevel: 0,
           totallevel: 0 
         })
         alert("Account successfully created! Now proceed to log in")

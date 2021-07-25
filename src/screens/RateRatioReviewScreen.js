@@ -7,7 +7,7 @@ import Button from '../components/Button'
 import BackButton from '../components/BackButton'
 import firebase from '../../database/firebase.js';
 
-export default function DecReviewScreen({navigation}){
+export default function RateRatioReviewScreen({navigation}){
     const[levelCounter , setLevelCounter] = useState(0)
     const [level, setLevel] = useState(0)
     const [answer, setAnswer] = useState('')
@@ -25,7 +25,7 @@ export default function DecReviewScreen({navigation}){
         firebase.database().ref(`users/${user.uid}`)
         .on('value', (user) => {
           if (mounted){
-          var level = user.val().declevel
+          var level = user.val().rlevel
           setLevel(level)
           console.log(level)
         }
@@ -35,7 +35,7 @@ export default function DecReviewScreen({navigation}){
 
     useEffect(() => {// rendering of question according to user level 
         let mounted = true; 
-        firebase.database().ref(`decimals/${levelCounter}`)
+        firebase.database().ref(`rateandratio/${levelCounter}`)
         .on('value', (qn) => {
           if (mounted){
           console.log(qn.val())
@@ -88,7 +88,7 @@ export default function DecReviewScreen({navigation}){
       return(
         <Background>
           <BackButton goBack={navigation.goBack} />
-          <Header>Decimals</Header>
+          <Header>Rate and Ratio</Header>
           <Text style = {styles.questionText}>Question {questionState.id} </Text>
           <Text style = {styles.baseText}>{questionState.question}</Text>
           <Text style = {styles.baseText}>Answer: {questionState.answer}</Text>

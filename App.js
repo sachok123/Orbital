@@ -17,9 +17,11 @@ import ReviewScreen from './src/screens/ReviewScreen'
 import TopicScreen from './src/screens/TopicScreen'
 import FractScreen from './src/screens/FractScreen'
 import DecScreen from './src/screens/DecScreen'
+import RateRatioScreen from './src/screens/RateRatioScreen'
 import DecReviewScreen from './src/screens/DecReviewScreen'
 import FractReviewScreen from './src/screens/FractReviewScreen'
 import TopicReviewScreen from './src/screens/TopicReviewScreen'
+import RateRatioReviewScreen from './src/screens/RateRatioReviewScreen'
 
 
 StatusBar.setBarStyle('light-content')
@@ -45,9 +47,11 @@ export default function App() {
           <Stack.Screen name = "TopicScreen" component = {TopicScreen}/>
           <Stack.Screen name = "FractScreen" component = {FractScreen}/>
           <Stack.Screen name = "DecScreen" component = {DecScreen}/>
+          <Stack.Screen name = "RateRatioScreen" component = {RateRatioScreen}/>
           <Stack.Screen name = "TopicReviewScreen" component = {TopicReviewScreen}/>
           <Stack.Screen name = "FractReviewScreen" component = {FractReviewScreen}/>
           <Stack.Screen name = "DecReviewScreen" component = {DecReviewScreen}/>
+          <Stack.Screen name = "RateRatioReviewScreen" component = {RateRatioReviewScreen}/>
           <Stack.Screen
             name="ResetPasswordScreen"
             component={ResetPasswordScreen}
