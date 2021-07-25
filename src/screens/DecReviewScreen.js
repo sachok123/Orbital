@@ -7,7 +7,7 @@ import Button from '../components/Button'
 import BackButton from '../components/BackButton'
 import firebase from '../../database/firebase.js';
 
-export default function FractReviewScreen({navigation}){
+export default function DecReviewScreen({navigation}){
     const[levelCounter , setLevelCounter] = useState(0)
     const [level, setLevel] = useState(0)
     const [answer, setAnswer] = useState('')
@@ -25,7 +25,7 @@ export default function FractReviewScreen({navigation}){
         firebase.database().ref(`users/${user.uid}`)
         .on('value', (user) => {
           if (mounted){
-          var level = user.val().fraclevel
+          var level = user.val().declevel
           setLevel(level)
           console.log(level)
         }
@@ -35,7 +35,7 @@ export default function FractReviewScreen({navigation}){
 
     useEffect(() => {// rendering of question according to user level 
         let mounted = true; 
-        firebase.database().ref(`fractions/${levelCounter}`)
+        firebase.database().ref(`decimals/${levelCounter}`)
         .on('value', (qn) => {
           if (mounted){
           console.log(qn.val())
@@ -79,17 +79,16 @@ export default function FractReviewScreen({navigation}){
           alignItems: 'center'
         },
         questionText: {
-          fontFamily: "Cochin",
-          fontSize: 19,
-          fontWeight: "bold"
-        }, 
-        
+            fontFamily: "Cochin",
+            fontSize: 19,
+            fontWeight: "bold"
+          }
       });
 
       return(
         <Background>
           <BackButton goBack={navigation.goBack} />
-          <Header>Fractions</Header>
+          <Header>Decimals</Header>
           <Text style = {styles.questionText}>Question {questionState.id} </Text>
           <Text style = {styles.baseText}>{questionState.question}</Text>
           <Text style = {styles.baseText}>Answer: {questionState.answer}</Text>

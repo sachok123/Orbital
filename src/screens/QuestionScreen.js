@@ -112,16 +112,17 @@ export default function QuestionScreen({ navigation }) {
       },
       questionText: {
         //fontFamily: "Cochin",
-        fontSize: 25
+        fontSize: 19, 
+        fontWeight: "bold"
       }
     });
     
     return(
       <Background>
         <BackButton goBack={navigation.goBack} />
-        <Header>Questions</Header>
+        <Header>Four Operations</Header>
 
-        <Text style = {styles.baseText}> Question No: {questionState.id}</Text>
+        <Text style = {styles.questionText}> Question {questionState.id}</Text>
         <Text style = {styles.baseText}> {questionState.question}</Text>
 
         <TextInput

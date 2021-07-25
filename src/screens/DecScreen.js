@@ -10,7 +10,7 @@ import firebase from '../../database/firebase.js';
 
 
 
-export default function FractionScreen({ navigation }) {
+export default function DecScreen({ navigation }) {
 
     const[email, setEmail] = React.useState('')
     const [levels, setLevels] = React.useState(0)
@@ -39,7 +39,7 @@ export default function FractionScreen({ navigation }) {
       firebase.database().ref(`users/${userId}`)
       .on('value', (user) => {
         if (mounted){
-        var level = user.val().fraclevel
+        var level = user.val().declevel
         var totallevel = user.val().totallevel
         if (level == 20) {
           alert("Congrats! You've completed this set of questions!")
@@ -56,7 +56,7 @@ export default function FractionScreen({ navigation }) {
 
     React.useEffect(() => {// rendering of question according to user level 
       let mounted = true; 
-      firebase.database().ref(`fractions/${levels}`)
+      firebase.database().ref(`decimals/${levels}`)
       .on('value', (qn) => {
         if (mounted){
             var ans = qn.val().answer
@@ -86,7 +86,7 @@ export default function FractionScreen({ navigation }) {
       const correct = answerValidator(userAnswer)
       if (correct == true && levels < 20) {
         setLevels(levels + 1)
-        firebase.database().ref("users").child(users).child("fraclevel").set(levels + 1) //update of user 4 ops level 
+        firebase.database().ref("users").child(users).child("declevel").set(levels + 1) //update of user 4 ops level 
         firebase.database().ref("users").child(users).child("totallevel").set(counter + 1) //update of user total level 
       }
       setUserAnswer("")
@@ -119,7 +119,7 @@ export default function FractionScreen({ navigation }) {
     return(
       <Background>
         <BackButton goBack={navigation.goBack} />
-        <Header>Fractions</Header>
+        <Header>Decimals</Header>
         <Text style = {styles.questionText}> Question {questionState.id}</Text>
         <Text style = {styles.baseText}> {questionState.question}</Text>
 

@@ -79,15 +79,16 @@ export default function ReviewScreen({navigation}){
         },
         questionText: {
           fontFamily: "Cochin",
-          fontSize: 25
+          fontSize: 19,
+          fontWeight: "bold"
         }
       });
 
       return(
         <Background>
           <BackButton goBack={navigation.goBack} />
-          <Header>Questions</Header>
-          <Text style = {styles.baseText}>Question {questionState.id} </Text>
+          <Header>Four Operations</Header>
+          <Text style = {styles.questionText}>Question {questionState.id} </Text>
           <Text style = {styles.baseText}>{questionState.question}</Text>
           <Text style = {styles.baseText}>Answer: {questionState.answer}</Text>
           <Text style = {styles.baseText}>{questionState.method}</Text>

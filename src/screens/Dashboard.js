@@ -14,10 +14,10 @@ export default function Dashboard({ navigation }) {
       <Header>Let’s start</Header>
       <Button
         mode="outlined"
-        onPress={() => navigation.navigate("TopicScreen")}
-      >
+        onPress={() => navigation.navigate("TopicScreen")}>
         Topics
       </Button>
+
       <Button
         mode = "outlined"
         onPress = {() => navigation.navigate("TreeScreen")}>

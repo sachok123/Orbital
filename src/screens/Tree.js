@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
 import { StyleSheet, View, Animated} from 'react-native'
+import Header from '../components/Header'
 import Button from '../components/Button'
 import Background from '../components/Background'
 import BackButton from '../components/BackButton'
@@ -52,9 +53,11 @@ export default function TreeScreen({navigation}){
     };
 
   
+  
 return (
   <Background>
   <BackButton goBack={navigation.goBack} />
+  <Header> Level {level}</Header>
   <View>
   <Animated.Image
         style={{ transform: [{ scale: jumpValue }], width: 200, height: 200, marginBottom: 30 }}

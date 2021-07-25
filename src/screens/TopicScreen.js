@@ -27,6 +27,12 @@ export default function TopicScreen({ navigation }) {
         >
           Fractions
         </Button>
+        <Button
+          mode="outlined"
+          onPress={() => navigation.navigate("DecScreen")}
+        >
+          Decimals
+        </Button>
       </Background>
     )
   }

@@ -16,8 +16,11 @@ import TreeScreen from './src/screens/Tree'
 import ReviewScreen from './src/screens/ReviewScreen'
 import TopicScreen from './src/screens/TopicScreen'
 import FractScreen from './src/screens/FractScreen'
+import DecScreen from './src/screens/DecScreen'
+import DecReviewScreen from './src/screens/DecReviewScreen'
 import FractReviewScreen from './src/screens/FractReviewScreen'
 import TopicReviewScreen from './src/screens/TopicReviewScreen'
+
 
 StatusBar.setBarStyle('light-content')
 const Stack = createStackNavigator()
@@ -34,15 +37,17 @@ export default function App() {
         >
           <Stack.Screen name="StartScreen" component={StartScreen} />
           <Stack.Screen name = "QuestionScreen" component = {QuestionScreen} />
-          <Stack.Screen name="LoginScreen" component={LoginScreen} />
-          <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
-          <Stack.Screen name="Dashboard" component={Dashboard} />
+          <Stack.Screen name= "LoginScreen" component={LoginScreen} />
+          <Stack.Screen name= "RegisterScreen" component={RegisterScreen} />
+          <Stack.Screen name= "Dashboard" component={Dashboard} />
           <Stack.Screen name = "TreeScreen" component = {TreeScreen}/>
           <Stack.Screen name = "ReviewScreen" component = {ReviewScreen}/>
           <Stack.Screen name = "TopicScreen" component = {TopicScreen}/>
           <Stack.Screen name = "FractScreen" component = {FractScreen}/>
+          <Stack.Screen name = "DecScreen" component = {DecScreen}/>
           <Stack.Screen name = "TopicReviewScreen" component = {TopicReviewScreen}/>
           <Stack.Screen name = "FractReviewScreen" component = {FractReviewScreen}/>
+          <Stack.Screen name = "DecReviewScreen" component = {DecReviewScreen}/>
           <Stack.Screen
             name="ResetPasswordScreen"
             component={ResetPasswordScreen}

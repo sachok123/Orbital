@@ -27,6 +27,12 @@ export default function TopicReviewScreen({ navigation }) {
         >
           Fractions
         </Button>
+        <Button
+          mode="outlined"
+          onPress={() => navigation.navigate("DecReviewScreen")}
+        >
+          Decimals
+        </Button>
       </Background>
     )
   }
