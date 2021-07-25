@@ -1,0 +1,341 @@
+{
+  "fractions" : [ {
+    "answer" : "3/5",
+    "id" : "1",
+    "method" : "6/10 = 3/5 in its simplest form!",
+    "question" : "Julia went to 10 houses on her street for Halloween. 6 of the houses gave her a chocolate bar. What fraction of houses on Julia’s street gave her a chocolate bar?"
+  }, {
+    "answer" : "1/6",
+    "id" : "2",
+    "method" : "Since 1 whole portion is split equally into 6 parts, each part would be 1/6.",
+    "question" : "Heather is painting a portrait of her best friend, Lisa. To make it easier, she divides the portrait into 6 equal parts. What fraction represents each part of the portrait?"
+  }, {
+    "answer" : "5/3",
+    "id" : "3",
+    "method" : "5 ⅓ - ⅓ - 3 ⅓ = 5/3",
+    "question" : "For a party, Jaime had 5 ⅓ bottles of cola for her friends to drink. She drank ⅓ of a bottle herself. Her friends drank 3 ⅓. How many bottles of cola, in improper form, does Jaime have left?"
+  }, {
+    "answer" : "4/3",
+    "id" : "4",
+    "method" : "Find the common denominator! 1/2 + 5/6 = 3/6 + 5/6 = 8/6 = 4/3 ",
+    "question" : "Kevin completed ½ of an assignment at school. When he was home that evening, he completed ⅚ of another assignment. How many assignments, in improper form, did Kevin complete?"
+  }, {
+    "answer" : "3/8",
+    "id" : "5",
+    "method" : "Find the common denominator! 7/8 - 1/2 = 7/8 - 4/8 = 3/8",
+    "question" : "Packing school lunches for her kids, Patty used ⅞ of a package of ham. She also used ½ of a package of turkey. How much more ham than turkey did Patty use?"
+  }, {
+    "answer" : "1/8",
+    "id" : "6",
+    "method" : "In other words, they ran half the distance on Thursday of what they did on Wednesday. 1/4 x 1/2 = 1/8",
+    "question" : "During PE on Wednesday, the students ran for ¼ of a kilometre. On Thursday, they ran ½ as many kilometres as on Wednesday. How many kilometres did the students run on Thursday?"
+  }, {
+    "answer" : "4",
+    "id" : "7",
+    "method" : "⅘ ÷ ⅕ = 4/3  x 3/1 = 4",
+    "question" : "A clothing manufacturer uses ⅕ of a bottle of colour dye to make one pair of pants. The manufacturer used ⅘ of a bottle yesterday. How many pairs of pants did the manufacturer make?"
+  }, {
+    "answer" : "20/33",
+    "id" : "8",
+    "method" : "Carry out cross multiplication to simplify the equaltion. 25/24 x 32/55 = 5/3 x 4/11 = 20/33",
+    "question" : "Multiply 25/24 and 32/55. What's the answer in its simplest form?"
+  }, {
+    "answer" : "9/32",
+    "id" : "9",
+    "method" : "Invert the second fraction to make it into a multiplication equation. 21/16 x 6/28 = 3/8 x 3/4 = 9/32",
+    "question" : "Divide 21/16 and 28/6. What's the answer in its simplest form?"
+  }, {
+    "answer" : "5/4",
+    "id" : "10",
+    "method" : "2½ + 1¾ - 3 = 5/4 ",
+    "question" : "Ciara is making a dance outfit. She needs 2½ yards of fabric for a shawl and 1¾ yards of fabric for the dress. If she has 3 yards of fabric, how much more does she need?"
+  }, {
+    "answer" : "147",
+    "id" : "11",
+    "method" : "84 ÷ 4/7 = 84 x 7/4 = 21 x 7 = 147",
+    "question" : "4/7 of a number is 84. Find the number."
+  }, {
+    "answer" : "3",
+    "id" : "12",
+    "method" : "A trick question! if each cow gives 1/3 of the milk each day, there are 3 cows and the rest of the information is a diversion",
+    "question" : "A herd of cows gives 4 litres of milk each day. But each cow gives one-third of total milk each day. They give 24 litres milk in six days. How many cows are there in the herd?"
+  }, {
+    "answer" : "$64",
+    "id" : "13",
+    "method" : "Draw a model for the remaining questions to help you visulaise better! Since 1 - 1/4 - 1/8 = 5/8, 5 units represent $40. hence 8 units would be 40 ÷ 5 x 8= 64",
+    "question" : "Rachel spends 1/4 of her pocket money on chocolates, 1/8 on pizza. At the end she had $40 left. How much did she have at the beginning?"
+  }, {
+    "answer" : "40",
+    "id" : "14",
+    "method" : "Since 3/5 were 24 girls, there were 24 x 5/3 = 40 children. ",
+    "question" : "3/5 of a group of children were girls. If there were 24 girls, how many children were there in the group?"
+  }, {
+    "answer" : "6",
+    "id" : "15",
+    "method" : "If 2/5 of the food were pizzas, 1 - 2/5 = 3/5 of the food were burgers! Since the difference is 1/5, there were 30 x 1/5 = 6 more burgers",
+    "question" : "Lionel bought 30 pizzas and burgers altogether. 2/5 of the food bought were pizzas. How many more burgers than pizza did he buy? "
+  }, {
+    "answer" : "54",
+    "id" : "16",
+    "method" : "There were 1 unit of striped, 5 units of printed and 3 units of plain colored. Since 81 shirts are represented by 3 units, 1 unit would be 81/3 = 27. Since there are 2 more units of printed than plain shirts, the answer is 2 x 27 = 54.",
+    "question" : "1/9 of the shirts sold at Peter’s shop are striped. 5/8 of the remainder are printed. The rest of the shirts are plain colored shirts. If Peter’s shop has 81 plain colored shirts, how many more printed shirts than plain colored shirts does the shop have?"
+  }, {
+    "answer" : "15",
+    "id" : "17",
+    "method" : "(1 - 3/5) x (1 - 3/8) = 1/4 of her time was spent reading, which is 60 x 1/4 = 15 mins",
+    "question" : "Jenny’s mom says she has an hour before it’s bedtime. Jenny spends 3/5 of the hour texting a friend and 3/8 of the remaining time brushing her teeth and putting on her pajamas. She spends the rest of the time reading her book. How long (in mins) did Jenny read?"
+  }, {
+    "answer" : "12",
+    "id" : "18",
+    "method" : "1/6 + 1/3 = 1/6 + 2/6 = 1/2 of the students were in P5 and P4. Out of the 1/2, 1/4 are in P2, which means 1/4 x 1/2 = 1/8 of the entire auditorium, 96 x 1/8 = 12, were in P2. ",
+    "question" : "In an auditorium, 1/6 of the students are in P5, 1/3 are in P4, and 1/4 of the remaining students are in P2. If there are 96 students in the auditorium, how many students are there in P2?"
+  }, {
+    "answer" : "133",
+    "id" : "19",
+    "method" : "If 2/9 are adults, 7/9 are children and there are 5 units more children. Hence, number of children was 95 ÷ 5 x 7 = 19 x 7 = 133",
+    "question" : "2/9 of the people on a restaurant are adults. If there are 95 more children than adults, how many children are there in the restaurant?"
+  }, {
+    "answer" : "$595",
+    "id" : "20",
+    "method" : "Since before spending they had an even amount, and after Henry had spent 350 -95 = 255 more, Henry had 3 units less. Hence, the Gary had 255 ÷ 3 x 7 = $595",
+    "question" : "Gary and Henry brought an equal amount of money for shopping. Gary spent $95 and Henry spent $350. After that Henry had 4/7 of what Gary had left. How much money did Gary have left after shopping?"
+  }, {
+    "answer" : "",
+    "id" : "",
+    "method" : "",
+    "question" : ""
+  } ],
+  "operations" : [ {
+    "answer" : "2013",
+    "id" : "1",
+    "method" : "4008 - 1995 = 2013",
+    "question" : "When you subtract 1,995 from 4,008, the answer is equal to"
+  }, {
+    "answer" : "30898",
+    "id" : "2",
+    "method" : "1000 + 29898 = 30898",
+    "question" : "If you add 1000 to 29898, you obtain"
+  }, {
+    "answer" : "288",
+    "id" : "3",
+    "method" : "102 + 92 + 94 = 288",
+    "question" : "Ashley bought a big bag of candy. The bag had 102 blue candies, 92 red candies and 94 green candies. How many candies were there in total?"
+  }, {
+    "answer" : "26074",
+    "id" : "4",
+    "method" : "10576 + 15498 = 26074",
+    "question" : "A store normally sells 10576 cards per month. In June, the store sold 15498 more cards than usual. In total, how many cards did the hobby store sell in June?"
+  }, {
+    "answer" : "105",
+    "id" : "5",
+    "method" : "296 - 105 - 86 = 105 ",
+    "question" : "Ashley bought a big bag of candy to share with her friends. In total, there were 296 candies. She gave 105 candies to Marissa. She also gave 86 candies to Kayla. How many candies were left?"
+  }, {
+    "answer" : "854",
+    "id" : "6",
+    "method" : "61 x 14 = 854",
+    "question" : "There are 61 boxes of pencils in a store. There are 14 pencils in each box. How many pencils are in the store?"
+  }, {
+    "answer" : "86400",
+    "id" : "7",
+    "method" : "24 x 3600 = 86400",
+    "question" : "There are 24 hours in one day, and 3,600 seconds in one hour. How many seconds are in one day?"
+  }, {
+    "answer" : "330",
+    "id" : "8",
+    "method" : "(20 x 16) + (18 x 5) = 330",
+    "question" : "Julia read a book in 20 days. She read 16 pages every day for the first 15 days, and 18 pages everyday for the last 5 days. How many pages did Julia read?"
+  }, {
+    "answer" : "$480",
+    "id" : "9",
+    "method" : "3 x 4 x 8 x 5 = 480",
+    "question" : "Cayley earns $5 an hour by delivering newspapers. She delivers newspapers 3 days each week, for 4 hours at a time. After delivering newspapers for 8 weeks, how much money will Cayley earn?"
+  }, {
+    "answer" : "1",
+    "id" : "10",
+    "method" : "145 ÷ 6 = 24 Remainder 1",
+    "question" : "If 6 children share 145 sweets equally, how many sweets will remain?"
+  }, {
+    "answer" : "2",
+    "id" : "11",
+    "method" : "86 ÷ 3 = 28 Remainder 2",
+    "question" : "A restaurant receives a shipment of 86 chicken cutlets. If it takes 3 cutlets to make a dish, how many cutlets will the restaurant have left over after making as many dishes as possible?"
+  }, {
+    "answer" : "16",
+    "id" : "12",
+    "method" : "Remember to carry out the operations in the braces first! Hence, 19 - 3 = 16",
+    "question" : "What is the value of (14 + 5) - (5 - 2)"
+  }, {
+    "answer" : "31",
+    "id" : "13",
+    "method" : "Follow the Bodmass rule! (2 x 19) - 7 = 31",
+    "question" : "2 x (14 + 5) - 7 ="
+  }, {
+    "answer" : "226",
+    "id" : "14",
+    "method" : "330 - 104 = 226",
+    "question" : "What is the value of 330 - (109 - a) if a = 5?"
+  }, {
+    "answer" : "3111",
+    "id" : "15",
+    "method" : "z = 8340 - y = 8340 - 5229 = 3111 ",
+    "question" : "If z + y = 8340 and y = 5229, what is z?"
+  }, {
+    "answer" : "88",
+    "id" : "16",
+    "method" : "S = 66 x 4 ÷ 3 = 88",
+    "question" : "What is S if 66 x 4 = 3 x S?"
+  }, {
+    "answer" : "2",
+    "id" : "17",
+    "method" : "(48 - 21) ÷ 5 = 5 Remainder 2 ",
+    "question" : "A PE class has 48 students. One group of 21 students chooses to play volleyball. The teacher then divides the remaining students into as many groups of 5 as possible to shoot baskets. How many students will be left?"
+  }, {
+    "answer" : "13",
+    "id" : "18",
+    "method" : "Follow the Bodmass rule! (18 ÷ 6 x 5) - 14 ÷ 7 = 15 - 2 = 13",
+    "question" : "(18 ÷ 6 x 5) - 14 ÷ 7 = "
+  }, {
+    "answer" : "2",
+    "id" : "19",
+    "method" : "Follow the Bodmass rule! 6 x 4 ÷ 12 + 72 ÷ 8 - 9 = 24 ÷ 12 + 9 - 9 = 2",
+    "question" : "6 x 4 ÷ 12 + 72 ÷ 8 - 9"
+  }, {
+    "answer" : "-3",
+    "id" : "20",
+    "method" : "Follow the Bodmass rule! -1 x [-25 ÷ 5] - 48 ÷ 6 = -1 x -5 - 8 = 5 - 8 = -3",
+    "question" : "-1 x [(3 - 4 x 7) ÷ 5] - 2 x 24 ÷ 6"
+  }, {
+    "answer" : "",
+    "id" : "",
+    "method" : "",
+    "question" : ""
+  } ],
+  "decimals" : [ {
+    "answer" : "23.206",
+    "id" : "1",
+    "method" : "Consider 2/10, mark the decimal point one place from right to left to become 0.2 Now consider 6/1000, mark the decimal point three places from right to left to become 0.006. Hence, 23 + 0.2 + 0.006 = 23.206  ",
+    "question" : "Write the following as a decimal; 23 + (2/10) + (6/1000)"
+  }, {
+    "answer" : "869/50",
+    "id" : "2",
+    "method" : "17.38 can be written as (17.38/1). Now multiply both numerator and denominator by 100 to get (1738/100) which is = (869/50)",
+    "question" : "Convert the following decimal into a improper fraction in its simplest form; 17.38"
+  }, {
+    "answer" : "170.483",
+    "id" : "3",
+    "method" : "make sure the digits in the ones, tenths and hundredths place are in the right positions when doing you addition working!",
+    "question" : "18.03 + 146.3 + 0.829 + 5.324 = "
+  }, {
+    "answer" : "25.13",
+    "id" : "4",
+    "method" : "In order to get 34.58 from 59.71, we would have to decrease it by the difference between the two. Hence, 59.71 - 34.58 = 25.13",
+    "question" : "By how much should 59.71 be decreased to get 34.58?"
+  }, {
+    "answer" : "0.215",
+    "id" : "5",
+    "method" : "Here we have to do normal multiplication with shifting the decimal point by one place to the right",
+    "question" : "0.0215 x 10 = "
+  }, {
+    "answer" : "20708",
+    "id" : "6",
+    "method" : "Here we have to do normal multiplication with shifting the decimal point by three places to the right",
+    "question" : "20.708 x 1000 = "
+  }, {
+    "answer" : "1350.31",
+    "id" : "7",
+    "method" : "First multiply as usual by ignoring the decimal point; 28.73 x 47 = 135031. Now mark the decimal point in the answer to have 2 places of decimal as there in the given decimal",
+    "question" : "28.73 x 47 = "
+  }, {
+    "answer" : "239.447",
+    "id" : "8",
+    "method" : "First multiply normally by ignoring the decimal point; 211.9 x 1.13 = 239447. The sum of the decimal places is 3, so now mark the decimal point in the product 3 places from the right. Hence, the answer is 239.447!",
+    "question" : "211.9 x 1.13 = "
+  }, {
+    "answer" : "0.23541",
+    "id" : "9",
+    "method" : "Shift the decimal point by three places to the left to get the result 0.23541",
+    "question" : "235.41/1000 = "
+  }, {
+    "answer" : "12.08",
+    "id" : "10",
+    "method" : "Since the divisor is already a whole number, you can place the decimal point in the quotient directly in line above that in the dividend right now in your working. Now you can proceed to carry out division as per normal",
+    "question" : "217.44 divided by 18 is equals to "
+  }, {
+    "answer" : "4.2",
+    "id" : "11",
+    "method" : "Make the divisor, 9.6, into a whole number by moving the decimal place to the right by one place to make it 96. At the same time, move the decimal point in the dividend by the same number of places to make it 403.2. Now line up the decimal point in the quotient directly above that in the divident and carry out division as per normal.",
+    "question" : "What will you get when you divide 40.32 by 9.6?"
+  }, {
+    "answer" : "140",
+    "id" : "12",
+    "method" : "Make the divisor, 2.28, into a whole number by moving the decimal place to the right by 2 places to make it 228. At the same time, move the decimal point in the dividend by the same number of places to make it 31920. Now line up the decimal point in the quotient directly above that in the divident and carry out division as per normal.",
+    "question" : "319.2/2.28 = "
+  }, {
+    "answer" : "88.48",
+    "id" : "13",
+    "method" : "88 + 48/100 = 88.48",
+    "question" : "Write Eighty eight and forty eight hundredths as a decimal"
+  }, {
+    "answer" : "59",
+    "id" : "14",
+    "method" : "(1.12 x 100) - 53 = 59",
+    "question" : "Ray was 53cm long at birth. He is 5 years old now and is 1.12m tall. How much has Ray grown in height in the past 5 years? Express your answer in centimeters. "
+  }, {
+    "answer" : "54.0",
+    "id" : "15",
+    "method" : "Mass of each lamb after shearing = 12 - (1200 ÷ 1000) = 12 - 1.2 = 10.8, Hence total mass of lambs after = 10.8 x 5 = 54.0",
+    "question" : "Mary has 5 lambs each having a mass of 12kg. Mary shears 1200 grams of wool from each lamb. What is the total mass, in kg and to one decimal place, of the lambs after the shearing?"
+  }, {
+    "answer" : "Jimmy",
+    "id" : "16",
+    "method" : "Jimmy sold 160 x 265 = 42400 ml of juice, whereas Ricky sold 30 x (1.325 x 1000) = 39750ml of juice. Hence, Jimmy sold a greater volume of juice!",
+    "question" : "At a school fair, Jimmy and Ricky had juice stalls. Jimmy sold 160 glasses each containing 265 ml of juice, while Ricky sold 30 bottles each containing 1.325 litres of juice. Who sold a greater volume of juice?"
+  }, {
+    "answer" : "4.80",
+    "id" : "17",
+    "method" : "total flour and sugar needed in grams = (600 + 200) x 6 = 800 x 6 = 4800g. Hence, we will need 4800 ÷ 1000 = 4.8kg of sugar and flour altogether.",
+    "question" : "You need 600g of flour and 200g of sugar to make a cake. How much flour and sugar will you need altogether to make 6 such cakes? Give your answer in kgs and in 2 decimal places."
+  }, {
+    "answer" : "650",
+    "id" : "18",
+    "method" : "cost of LED Tv after 60 months = 60 x 108.31 = $6498.60. Hence, he will have to pay 6498.60 - 5849 = $649.60 more, which rounded to the nearest dollar would be $650",
+    "question" : "An LED TV costs $5849 when paid by cash upfront. If Alex buys the LED TV payable over 60 monthly instalments of $108.31 each, how much more than the cash price does the LED TV cost him? Give your answer correct to the nearest dollar?"
+  }, {
+    "answer" : "47.5",
+    "id" : "19",
+    "method" : "If any worked 40h, she gains 22.25 x 40 = $890. Hence, the extra amount of 1173.50 - 890 = $283.50 was earned by working at a rate of $37.80. Therefore, she worked 40 + (283.50 ÷ 37.80) = 40 + 7.5 = 47.5h!",
+    "question" : "At work, Amy receives $22.25 per hour for up to 40 hours per week. Any time beyond that is paid at a rate of $37.80 per hour. If she receives $1,173.50 in her paycheck, how much time did she work that week?"
+  }, {
+    "answer" : "96.20",
+    "id" : "20",
+    "method" : "This would mean 5 kites and 5 spools would cost 29.75 x 5 = $148.75. This would mean 7 kites would cost 228.55 - 148.75 = $79.80, and that means 1 kite would cost 79.80 ÷ 7 = $11.40 and 1 spool costs 29.75 - 11.40 = $18.35. Hence, Ted will have to pay (2 x 11.40) + (4 x 18.35) = $22.80 + $73.40 = $96.20",
+    "question" : "A kite and a spool cost $29.75 together. Jason paid $228.55 for 12 kites and 5 spools. How much will Ted pay for 2 kites and 4 spools?"
+  }, {
+    "answer" : "",
+    "id" : "",
+    "method" : "",
+    "question" : ""
+  } ],
+  "users" : {
+    "Eu2zInUSqlZZRFHw8y6QkBTCze73" : {
+      "fraclevel" : 0,
+      "oplevel" : 7,
+      "declevel" : 0,
+      "totallevel" : 7
+      
+    },
+    "MBqxfJBEntPfJ5eh1yDmMth6xeD2" : {
+      "fraclevel" : 0,
+      "oplevel" : 5,
+      "declevel" : 0,
+      "totallevel" : 5
+    },
+    "MwnVXz3Ii1b70YF2xd4UznUzuXz1" : {
+      "fraclevel" : 1,
+      "oplevel" : 2,
+      "declevel" : 0,
+      "totallevel" : 3
+    }
+  }
+}

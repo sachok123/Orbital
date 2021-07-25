@@ -21,7 +21,7 @@ export default function Dashboard({ navigation }) {
       <Button
         mode = "outlined"
         onPress = {() => navigation.navigate("TreeScreen")}>
-        See your Tree!
+        See your Forest!
       </Button>
 
       <Button

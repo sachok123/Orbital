@@ -60,14 +60,14 @@ return (
   <Header> Level {level}</Header>
   <View>
   <Animated.Image
-        style={{ transform: [{ scale: jumpValue }], width: 200, height: 200, marginBottom: 30 }}
+        style={{ transform: [{ scale: jumpValue }], width: 200, height: 200, marginBottom: 30, resizeMode:'contain' }}
         source={{uri: imageUrl}} >
   </Animated.Image>
   <Button
         mode="outlined"
         style={{ alignItems : 'center', justifyContent : 'center'}}
         onPress={ActiveAnim}>
-          See Your Tree!
+          See Your Forest!
         </Button>
     </View>
   </Background>

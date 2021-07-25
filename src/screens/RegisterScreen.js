@@ -37,10 +37,12 @@ export default function RegisterScreen({ navigation }) {
                           .then(userCredential => {user = userCredential.user})
         console.log("user", user)
         const level = firebase.database().ref(`users/${user.uid}`).set({
+          declevel: 0, 
           fraclevel: 0,
-          level: 0,
+          oplevel: 0,
           totallevel: 0 
         })
+        alert("Account successfully created! Now proceed to log in")
 
     }catch (error) {
       console.log("error", error);
@@ -48,7 +50,7 @@ export default function RegisterScreen({ navigation }) {
     }
     navigation.reset({
       index: 0,
-      routes: [{ name: 'Dashboard' }],
+      routes: [{ name: 'LoginScreen' }],
     })
   }
 
