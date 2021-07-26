@@ -28,6 +28,10 @@ export default function FractReviewScreen({navigation}){
           var level = user.val().fraclevel
           setLevel(level)
           console.log(level)
+          if (level == 0) {
+            alert("You have not attempted a question from this topic yet!")
+            navigation.navigate('TopicReviewScreen')
+          }
         }
       })
       return () => mounted = false;
